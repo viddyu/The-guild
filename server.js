@@ -15,7 +15,7 @@ app.set("view engine", "handlebars");
 
 var routes = require("./controllers/guild_controller.js");
 
-app.use("/", routes);
+/*app.use("/", routes);8*/
 
 app.listen(port, function(){
 	console.log("Connected on port " + port);
