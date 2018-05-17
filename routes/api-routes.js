@@ -33,6 +33,7 @@ app.get("/api/all-apprentices", function(req, res) {
   });
 });
 
+// ========================================================
 
 // Get a specific apprentice by their field
 app.get("/api/:field", function(req, res) {
