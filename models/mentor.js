@@ -4,20 +4,23 @@
 // Sequelize (capital) references the standard library
 var Sequelize = require("sequelize");
 // sequelize (lowercase) references our connection to the DB.
-var sequelize = require("connection.js");
+var sequelize = require("../config/connection.js");
 
 // Creates a "Character" model that matches up with DB
 var Mentor = sequelize.define("mentor", {
     // The mentor's ID
-    ID: Sequelize.INTEGER,
+    id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+    },
     // The mentor's name
-    Name: Sequelize.STRING,
+    name: Sequelize.STRING,
     // The mentor's job
-    Job: Sequelize.STRING,
+    job: Sequelize.STRING,
     // The mentor's educational background
-    Education: Sequelize.STRING,
+    education: Sequelize.STRING,
     // The mentor's project
-    Project: Sequelize.STRING
+    projectDescription: Sequelize.STRING
 }, {
         timestamps: false
     });
