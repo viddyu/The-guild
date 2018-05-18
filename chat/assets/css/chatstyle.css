@@ -1,4 +1,24 @@
-/* CSS Document */
+/*html, body {
+  text-align: center;
+  font-family: 'Avenir Next', 'Helvetica', 'Arial', sans-serif;
+}
+
+html,body,li,form,ul {
+  padding: 0;
+  margin: 0;
+}
+
+form {
+    padding-bottom: 2%;
+}
+li {
+    list-style: none;
+    width: 100vw;
+}
+
+li:nth-child(odd) { 
+    background: #eee; 
+}*/
 
 body {
     font: 12px arial;
@@ -27,13 +47,12 @@ a:hover {
     text-decoration: underline;
 }
 
-#wrapper,
+#container,
 #loginform {
-    border-radius: 25px;
     margin: 0 auto;
     padding-bottom: 25px;
-    background: #EBF4FB;
-    width: 504px;
+    background: silver;
+    width: 50%;
     border: 1px solid #ACD8F0;
 }
 
@@ -46,21 +65,19 @@ a:hover {
 }
 
 #chatbox {
-    border-radius: 25px;
     text-align: left;
     margin: 0 auto;
     margin-bottom: 25px;
     padding: 10px;
     background: #fff;
     height: 270px;
-    width: 430px;
+    width: 75%;
     border: 1px solid #ACD8F0;
     overflow: auto;
 }
 
 #usermsg {
-    border-radius: 25px;
-    width: 395px;
+    width: 65%;
     border: 1px solid #ACD8F0;
 }
 
