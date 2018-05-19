@@ -4,6 +4,7 @@ var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
+var io = require("socket.io")(http);
 
 // Sets up the Express App
 // =============================================================
@@ -33,6 +34,20 @@ app.use(express.static(process.cwd() + "./views/html.layout"));
 // =============================================================
 // require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
+
+app.get("/", function(req, res) {
+    res.sendFile(__dirname + "/client/index.html");
+});
+
+io.on("connection", function(socket) {
+    console.log("user connected");
+    socket.on("chat message", function(msg) {
+        io.emit("chat message", msg);
+    });
+    socket.on("disconnect", function() {
+        console.log("user disconnected");
+    });
+});
 
 
 /*app.use("/", routes);8*/
