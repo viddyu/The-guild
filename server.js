@@ -39,6 +39,7 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/client/index.html");
 });
 
+//listen for connection and connect with chat
 io.on("connection", function(socket) {
     console.log("user connected");
     socket.on("chat message", function(msg) {
