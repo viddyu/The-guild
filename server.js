@@ -4,7 +4,13 @@ var express = require("express");
 var methodOverride = require("method-override");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-var io = require("socket.io")(http);
+var server = require("http").createServer(app);
+/*var http = require("http").Server(app);*/
+var io = require("socket.io").listen(server);
+
+var user = [];
+var connections = [];
+
 
 // Sets up the Express App
 // =============================================================
@@ -35,25 +41,27 @@ app.use(express.static(process.cwd() + "./views/html.layout"));
 // require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
 
-app.get("/", function(req, res) {
+//Listen for connection and connect with chat
+/*app.get("/", function(req, res) {
     res.sendFile(__dirname + "/client/index.html");
-});
+});*/
 
-//listen for connection and connect with chat
-io.on("connection", function(socket) {
-    console.log("user connected");
-    socket.on("chat message", function(msg) {
+
+io.sockets.on("connection", function(socket) {
+    connections.push(socket);
+    console.log("Connected", connections.length);
+
+    /*socket.on("chat message", function(msg) {
         io.emit("chat message", msg);
-    });
-    socket.on("disconnect", function() {
-        console.log("user disconnected");
-    });
+    });*/
+    connections.splice(connections.indexOf(socket), 1);
+    console.log("Disconected", connections.length)
 });
 
 
 /*app.use("/", routes);8*/
 // Starts the server to begin listening
 // =============================================================
-app.listen(port, function(){
-	console.log("The Guild is connected on port " + port);
+app.listen(port, function() {
+    console.log("The Guild is connected on port " + port);
 });
