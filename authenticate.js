@@ -21,7 +21,7 @@ var authorizationURL =
 "response_type=code&" + 
 "client_id=78nnd61xa8po8u&" +
 "redirect_uri=https://the-guilds.herokuapp.com/&" +
-"state=&" +
+"state=DCEeFWf45A53sdfKef424&" +
 "scope=r_basicprofile";
 
 // When the user provides valid Linkedin credentials and clicks the "Allow Access" button,
