@@ -1,0 +1,63 @@
+<!-- https://developer.linkedin.com/docs/getting-started-js-sdk#initialize -->
+
+<!-- // Placed in the head section of html -->
+<script type="text/javascript" src="//platform.linkedin.com/in.js">
+    api_key:   "78nnd61xa8po8u"
+    onLoad:    [ONLOAD]
+    // Default is false, requiring the user to log in every page load, regardless of previous successful logins
+    // When set to true, it will instruct the SDK to check for a
+    // cookie containing an existing authentication token for the user.
+    authorize: [AUTHORIZE]
+    lang:      en_US
+
+// Checks if the user has granted access to the application, returns true if the user is authorized, otherwise false
+IN.User.isAuthorized();
+
+// Presents the popup authorization window if the user isn't logged into Linkedin
+// requires user to authorize
+IN.User.authorize(callbackFunction, callbackScope);
+
+// JavaScript SDK enables you to make authenticated calls to the Linkedin REST API using the generic call wrapper:
+
+var authorizationURL = 
+"/authorization?" +
+"response_type=code&" + 
+"client_id=78nnd61xa8po8u&" +
+"redirect_uri=https://the-guilds.herokuapp.com/&" +
+"state=&" +
+"scope=r_basicprofile";
+
+IN.API.RAW(authorizationURL).method(GET).body(bodyContent).result(resultCallback);
+
+// Built-in refresh for user's session
+// Combine into refresh button
+IN.User.refresh();
+
+// Logs the user out of the application using the following code
+// Clears cookies, does NOT revoke or delete the user's authorization grant for the application
+// CallbackFunction calls when the user is logged out
+// callbackScope presents an optional scope to run a callbackFunction in.  Defaults to the window scope.
+IN.User.logout(callbackFunction, callbackScope);
+
+// IN --> root of Linkedin JS SDK. 
+// Listening for the framework's global events
+
+// Events are: ...
+// auth - when the user has authorized this application
+
+// frameworkLoaded - Fires before systemReady when all foundation JavaScript has been loaded from platform.linkedin.com. Usage for this event is intended to be internal-only for now.
+
+// logout - The user has logged out of the application
+// systemReady - Fired with the system is completely ready for execution. onLoad events can fire
+
+// callback - function to execute when eventName fires
+// callbackScope - object
+// extraData - provides additional object to callback, if not will default to {}
+
+IN.Event.on(IN, eventName, callback, callbackScope, extraData);
+
+// onOnce limits the event's callback to happening a single time
+IN.Event.onOnce(IN, eventName, callback, callbackScope, extraData);
+
+</script>
+
