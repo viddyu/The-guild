@@ -15,16 +15,21 @@ module.exports = function(app) {
 
   // index route loads main.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../initialize.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/html/main.html"));
   });
 
   // mentor route loads the mentor.html page
   app.get("/mentors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html.layout/mentor.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/html/mentor.html"));
   });
 
   // apprentice route loads the apprentice.html page
   app.get("/apprentices", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html.layout/apprentice.html"));
+    res.sendFile(path.join(__dirname, "../public/assets/html/apprentice.html"));
   });
-};
+
+  // apprentice route loads the apprentice.html page
+  app.get("/chat", function(req, res) {
+    res.sendFile(path.join(__dirname, "../chat/public/index.html"));
+  });
+}

@@ -34,7 +34,7 @@ app.set("view engine", "handlebars");
 
 // Static directory
 // =============================================================
-app.use(express.static("public"));
+app.use(express.static("./public/assets/html"));
 
 // Routes
 // =============================================================
