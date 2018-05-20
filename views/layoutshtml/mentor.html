@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Guild | Where Mentors and Apprentices Connect</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <img class="logo" src="assets/img/logo-guild.png" />
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Mentors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Apprentices<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <button class="login-main" onclick="document.getElementById('id01').style.display='block'">Login</button>
+                    <div id="id01" class="modal">
+                        <form class="modal-content animate">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            </div>
+                            <div class="container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                <br>
+                                <br>
+                                <button class="login-modal" type="submit">Login</button>
+                                <label>
+                                    <input type="checkbox" name="remember"> Remember me
+                                </label>
+                            </div>
+                            <div class="container">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw">Forgot <a href="#">password?</a></span>
+                            </div>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+   <h1>Mentors</h1>
+</body>
+
+</html>
