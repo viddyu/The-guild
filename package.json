@@ -9,12 +9,12 @@
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
-<<<<<<< HEAD
+
     "http": "0.0.0",
-=======
+
     "heroku": "^7.0.45",
     "jquery": "^3.3.1",
->>>>>>> ebeac43e957b8454f7c11b2c6ad1448a55d0007c
+
     "method-override": "^2.3.10",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.3",
