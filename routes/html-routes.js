@@ -15,7 +15,7 @@ module.exports = function(app) {
 
   // index route loads main.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/html.layout/main.html"));
+    res.sendFile(path.join(__dirname, "../initialize.html"));
   });
 
   // mentor route loads the mentor.html page

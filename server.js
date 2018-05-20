@@ -27,7 +27,7 @@ app.set("view engine", "handlebars");
 
 // Static directory
 // =============================================================
-app.use(express.static(process.cwd() + "./views/html.layout"));
+app.use(express.static("public"));
 
 // Routes
 // =============================================================
