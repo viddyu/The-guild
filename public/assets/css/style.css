@@ -1,5 +1,6 @@
 body {
-    background: lightgray;
+    background: white;
+
 }
 
 .logo{
@@ -19,6 +20,11 @@ h1 {
     font-size: 50px;
 }
 
+.lead{
+    font-family: 'Berkshire Swash', cursive;
+    text-align: center;
+}
+
 .card-one {
     position: absolute;
 }
@@ -28,12 +34,29 @@ h1 {
     right: 100px;
 }
 
+.parallax { 
+    /* The image used */
+    background-image: url(../img/image1.jpg);
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .Apprentice {
-    position: right;
+    position: absolute;
+    right:100px;
+    height
 }
 
 .Mentor {
-    position: left;
+    position: absolute;
+    left: 100px;
+    height:;
 }
 
 .card-img-top {
