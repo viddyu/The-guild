@@ -1,6 +1,16 @@
 body {
-    background: white;
+    background:black;
 
+
+}
+
+.HEAD{
+    background: transparent;
+    color: white;
+}
+.jumbotron {
+    background: transparent;
+    color: white;
 }
 
 .logo{
@@ -36,7 +46,7 @@ h1 {
 
 .parallax { 
     /* The image used */
-    background-image: url(../img/image1.jpg);
+    background-image: url(../img/BG_F_Town01.jpg);
 
     /* Set a specific height */
     height: 500px; 
@@ -46,6 +56,22 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.parallax { 
+    /* The image used */
+    background-image: url(../img/BG_F_Town01.jpg);
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card{
+    background: white;
 }
 
 .Apprentice {
@@ -57,20 +83,12 @@ h1 {
 .Mentor {
     position: absolute;
     left: 100px;
-    height:;
-}
+    }
 
 .card-img-top {
     width: 200px;
     height: 200px;
     margin: auto;
-}
-
-.carousel {
-    width: 50%;
-    height: auto;
-    margin: auto;
-    margin-bottom: 25px;
 }
 
 /* Full-width input fields */
