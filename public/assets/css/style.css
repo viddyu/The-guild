@@ -28,6 +28,14 @@ h1 {
     right: 100px;
 }
 
+.Apprentice {
+    position: right;
+}
+
+.Mentor {
+    position: left;
+}
+
 .card-img-top {
     width: 200px;
     height: 200px;
