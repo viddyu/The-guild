@@ -62,7 +62,7 @@ h1 {
     background-image: url(../img/BG_F_Town01.jpg);
 
     /* Set a specific height */
-    height: 500px; 
+    height: 700px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -71,7 +71,8 @@ h1 {
     background-size: cover;
 }
 .card{
-    background: white;
+    background: black;
+    color: white;
 }
 
 .Apprentice {
